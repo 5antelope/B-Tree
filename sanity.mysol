@@ -12,7 +12,9 @@
 	"x" to exit
 word=?
 k=?
-IMPLEMENT  ME!
+
+*** successors of alex (1) ***
+	alexander 
 
 	*** These are your commands .........
 	"C" to scan the tree
@@ -27,7 +29,39 @@ IMPLEMENT  ME!
 	"x" to exit
 word=?
 k=?
-IMPLEMENT  ME!
+>>>>>>>>>>> check point 1 <<<<<<<<<
+	TEST LEN: 0
+>>>>>>>>>>> check point 2 <<<<<<<<<
+>>>>>>>>>>> check point 3 <<<<<<<<<
+>>>>>>>>>>> check point 1 <<<<<<<<<
+	TEST LEN: 1
+*** aa
+>>>>>>>>>>> check point 2 <<<<<<<<<
+>>>>>>>>>>> check point 3 <<<<<<<<<
+>>>>>>>>>>> check point 1 <<<<<<<<<
+	TEST LEN: 1
+*** aal
+>>>>>>>>>>> check point 2 <<<<<<<<<
+>>>>>>>>>>> check point 3 <<<<<<<<<
+>>>>>>>>>>> check point 1 <<<<<<<<<
+	TEST LEN: 1
+*** aalii
+>>>>>>>>>>> check point 2 <<<<<<<<<
+>>>>>>>>>>> check point 3 <<<<<<<<<
+>>>>>>>>>>> check point 1 <<<<<<<<<
+	TEST LEN: 1
+*** aam
+>>>>>>>>>>> check point 2 <<<<<<<<<
+>>>>>>>>>>> check point 3 <<<<<<<<<
+>>>>>>>>>>> check point 1 <<<<<<<<<
+	TEST LEN: 1
+*** aani
+>>>>>>>>>>> check point 2 <<<<<<<<<
+FUCK!!!!
+>>>>>>>>>>> check point 4 <<<<<<<<<
+
+*** predecessors of alex (1) ***
+	aardvark 
 
 	*** These are your commands .........
 	"C" to scan the tree
@@ -42,7 +76,7 @@ IMPLEMENT  ME!
 	"x" to exit
 word=?
 k=?
-IMPLEMENT  ME!
+param k start from 1
 
 	*** These are your commands .........
 	"C" to scan the tree
@@ -57,7 +91,7 @@ IMPLEMENT  ME!
 	"x" to exit
 word=?
 k=?
-IMPLEMENT  ME!
+param k start from 1
 
 	*** These are your commands .........
 	"C" to scan the tree
@@ -72,7 +106,9 @@ IMPLEMENT  ME!
 	"x" to exit
 word=?
 k=?
-IMPLEMENT  ME!
+
+*** successors of zebra (10) ***
+	
 
 	*** These are your commands .........
 	"C" to scan the tree
@@ -87,7 +123,49 @@ IMPLEMENT  ME!
 	"x" to exit
 word=?
 k=?
-IMPLEMENT  ME!
+>>>>>>>>>>> check point 1 <<<<<<<<<
+	TEST LEN: 0
+>>>>>>>>>>> check point 2 <<<<<<<<<
+>>>>>>>>>>> check point 3 <<<<<<<<<
+>>>>>>>>>>> check point 1 <<<<<<<<<
+	TEST LEN: 1
+*** aa
+>>>>>>>>>>> check point 2 <<<<<<<<<
+>>>>>>>>>>> check point 3 <<<<<<<<<
+>>>>>>>>>>> check point 1 <<<<<<<<<
+	TEST LEN: 2
+*** aa
+*** aal
+>>>>>>>>>>> check point 2 <<<<<<<<<
+>>>>>>>>>>> check point 3 <<<<<<<<<
+>>>>>>>>>>> check point 1 <<<<<<<<<
+	TEST LEN: 3
+*** aa
+*** aal
+*** aalii
+>>>>>>>>>>> check point 2 <<<<<<<<<
+>>>>>>>>>>> check point 3 <<<<<<<<<
+>>>>>>>>>>> check point 1 <<<<<<<<<
+	TEST LEN: 4
+*** aa
+*** aal
+*** aalii
+*** aam
+>>>>>>>>>>> check point 2 <<<<<<<<<
+>>>>>>>>>>> check point 3 <<<<<<<<<
+>>>>>>>>>>> check point 1 <<<<<<<<<
+	TEST LEN: 5
+*** aa
+*** aal
+*** aalii
+*** aam
+*** aani
+>>>>>>>>>>> check point 2 <<<<<<<<<
+FUCK!!!!
+>>>>>>>>>>> check point 4 <<<<<<<<<
+
+*** predecessors of zebra (10) ***
+	aa aal aalii aam aani 
 
 	*** These are your commands .........
 	"C" to scan the tree

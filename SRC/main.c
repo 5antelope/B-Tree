@@ -20,6 +20,7 @@
  * postings records */
 
 long LISTSIZE[100];
+int fetchPage_cnt;
 
 extern FILE *fpbtree, *fppost, *fptext;
 extern void print_and_reset_stats();
@@ -38,6 +39,7 @@ extern int get_successors(char *key, int k, char *result[]);
 extern char **create_string_array(size_t n);
 extern void sort_string_array(char **arr, size_t n);
 extern void free_string_array(char **arr, size_t n);
+extern void printFetchPageCnt(void);
 
 int main(int argc, char **argv) {
     char word[MAXWORDSIZE];
@@ -46,10 +48,12 @@ int main(int argc, char **argv) {
     PAGENO i;
     int goOn;
     int  k;
+	
+	fetchPage_cnt = 0; /* init fetchPage counter */
 
     setparms(); /* reads the pagesize and the number of ptrs/postigs_record */
     dbopen();   /* opens or creates the three files (btree, postings, text) */
-
+	
     goOn = TRUE;
     while (goOn) {
         printf("\n\t*** These are your commands .........\n");
@@ -104,22 +108,24 @@ int main(int argc, char **argv) {
             scanf("%s", word);
             printf("k=?\n");
             scanf("%d", &k);
-            printf("IMPLEMENT  ME!\n");
+            get_successors(word, k, NULL);
             break;
         case '<':
             printf("word=?\n");
             scanf("%s", word);
             printf("k=?\n");
             scanf("%d", &k);
-            printf("IMPLEMENT  ME!\n");
+            get_predecessors(word, k, NULL);
             break;
         case 'T':
             printf("\n*** Printing tree in order .........\n");
             PrintTreeInOrder(ROOT, 0);
             break;
         case '#':
-            printf("IMPLEMENT  ME!\n");
-            break;
+            printf("\n");
+			printFetchPageCnt();
+			printf("\n...reseted FetchPage counter\n");
+			break;
         case 'x':
             printf("\n*** Exiting .........\n");
             goOn = FALSE;
