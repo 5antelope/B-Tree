@@ -58,6 +58,8 @@ extern int fetchPage_cnt;
 struct PageHdr *FetchPage(PAGENO Page)
 /* Page number of page to be fetched */
 {
+    fetchPage_cnt++;
+
     struct PageHdr *PagePtr;
     struct KeyRecord *KeyNode,
         *KeyListTraverser; /* To traverse the list of keys */
@@ -71,8 +73,6 @@ struct PageHdr *FetchPage(PAGENO Page)
                (int) ROOT, (int) FindNumPagesInTree());
         /*	exit(-1); */
     }
-
-	fetchPage_cnt++;
 
     /* Read in the page header */
     PagePtr = (struct PageHdr *) malloc(sizeof(*PagePtr));

@@ -53,12 +53,12 @@ typedef long  NUMPTRS;     /* needed to make contiguous postings easier */
 
 struct PageHdr {
      char              PgTypeID;         /* 'N' for NonLeaf, 'L' for Leaf */
-     PAGENO            PgNum;            
-     PAGENO            PgNumOfNxtLfPg;   /* FOR LEAF PAGES ONLY */
+     PAGENO           PgNum;            
+     PAGENO           PgNumOfNxtLfPg;   /* FOR LEAF PAGES ONLY */
      NUMBYTES          NumBytes;
      NUMKEYS           NumKeys;          
      struct KeyRecord *KeyListPtr;
-     PAGENO            PtrToFinalRtgPg;  /* FOR NONLEAF PAGES ONLY */ 
+     PAGENO           PtrToFinalRtgPg;  /* FOR NONLEAF PAGES ONLY */ 
 };
 
 
@@ -72,11 +72,11 @@ struct PageHdr {
    POSTINGSFILE (which contains the offsets into the Text file).       */
 
 struct KeyRecord {
-     PAGENO            PgNum;             /* FOR NONLEAF PAGES ONLY */
+     PAGENO           PgNum;             /* FOR NONLEAF PAGES ONLY */
      KEYLEN            KeyLen; 
-     char              *StoredKey;
+     char             *StoredKey;
      POSTINGSPTR       Posting;           /* FOR LEAF PAGES ONLY */
-     struct KeyRecord  *Next;
+     struct KeyRecord *Next;
 };
 
 /* 'upKey' should be used to hold the key to be moved upwards
@@ -86,3 +86,16 @@ struct upKey {
 	PAGENO		right;	/* right page, with keys > */
 	char *		key;
 };
+
+/* define a stack by by self */
+typedef struct ListNode {
+    struct ListNode *prev;
+    struct ListNode *next;
+    PAGENO     value;
+} ListNode;
+
+typedef struct List {
+    int count;
+    ListNode *first;
+    ListNode *last;
+} List;

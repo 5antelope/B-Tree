@@ -12,6 +12,14 @@
 	"x" to exit
 word=?
 k=?
+*** pageNo found:16812
+
+*** Checkpoint 1
+** test: alewife
+
+*** Checkpoint 2
+
+*** Checkpoint 3
 
 *** successors of alex (1) ***
 	alexander 
@@ -27,41 +35,11 @@ k=?
 	"T" to print the btree in inorder format
 	"#" to reset and print stats
 	"x" to exit
+****** checkpoint XX *****
 word=?
 k=?
->>>>>>>>>>> check point 1 <<<<<<<<<
-	TEST LEN: 0
->>>>>>>>>>> check point 2 <<<<<<<<<
->>>>>>>>>>> check point 3 <<<<<<<<<
->>>>>>>>>>> check point 1 <<<<<<<<<
-	TEST LEN: 1
-*** aa
->>>>>>>>>>> check point 2 <<<<<<<<<
->>>>>>>>>>> check point 3 <<<<<<<<<
->>>>>>>>>>> check point 1 <<<<<<<<<
-	TEST LEN: 1
-*** aal
->>>>>>>>>>> check point 2 <<<<<<<<<
->>>>>>>>>>> check point 3 <<<<<<<<<
->>>>>>>>>>> check point 1 <<<<<<<<<
-	TEST LEN: 1
-*** aalii
->>>>>>>>>>> check point 2 <<<<<<<<<
->>>>>>>>>>> check point 3 <<<<<<<<<
->>>>>>>>>>> check point 1 <<<<<<<<<
-	TEST LEN: 1
-*** aam
->>>>>>>>>>> check point 2 <<<<<<<<<
->>>>>>>>>>> check point 3 <<<<<<<<<
->>>>>>>>>>> check point 1 <<<<<<<<<
-	TEST LEN: 1
-*** aani
->>>>>>>>>>> check point 2 <<<<<<<<<
-FUCK!!!!
->>>>>>>>>>> check point 4 <<<<<<<<<
-
-*** predecessors of alex (1) ***
-	aardvark 
+****** checkpoint X *****
+21571 7360 1665 59395 20252 59394 39123 63381 13279 12243 5032 63372 34526 96920 90244 47844 16812 16812 16812 16812 16812 16812 16812 16812 16812 16812 16812  * 28
 
 	*** These are your commands .........
 	"C" to scan the tree
@@ -89,8 +67,10 @@ param k start from 1
 	"T" to print the btree in inorder format
 	"#" to reset and print stats
 	"x" to exit
+****** checkpoint XX *****
 word=?
 k=?
+****** checkpoint X *****
 param k start from 1
 
 	*** These are your commands .........
@@ -106,9 +86,18 @@ param k start from 1
 	"x" to exit
 word=?
 k=?
+*** pageNo found:60906
+
+*** Checkpoint 1
+** test: zealousy
+** test: zealproof
+
+*** Checkpoint 2
+
+*** Checkpoint 3
 
 *** successors of zebra (10) ***
-	
+	zebraic zebralike zebrass zebrawood zebrina zebrine zebrinny zebroid zebrula zebrule 
 
 	*** These are your commands .........
 	"C" to scan the tree
@@ -121,51 +110,11 @@ k=?
 	"T" to print the btree in inorder format
 	"#" to reset and print stats
 	"x" to exit
+****** checkpoint XX *****
 word=?
 k=?
->>>>>>>>>>> check point 1 <<<<<<<<<
-	TEST LEN: 0
->>>>>>>>>>> check point 2 <<<<<<<<<
->>>>>>>>>>> check point 3 <<<<<<<<<
->>>>>>>>>>> check point 1 <<<<<<<<<
-	TEST LEN: 1
-*** aa
->>>>>>>>>>> check point 2 <<<<<<<<<
->>>>>>>>>>> check point 3 <<<<<<<<<
->>>>>>>>>>> check point 1 <<<<<<<<<
-	TEST LEN: 2
-*** aa
-*** aal
->>>>>>>>>>> check point 2 <<<<<<<<<
->>>>>>>>>>> check point 3 <<<<<<<<<
->>>>>>>>>>> check point 1 <<<<<<<<<
-	TEST LEN: 3
-*** aa
-*** aal
-*** aalii
->>>>>>>>>>> check point 2 <<<<<<<<<
->>>>>>>>>>> check point 3 <<<<<<<<<
->>>>>>>>>>> check point 1 <<<<<<<<<
-	TEST LEN: 4
-*** aa
-*** aal
-*** aalii
-*** aam
->>>>>>>>>>> check point 2 <<<<<<<<<
->>>>>>>>>>> check point 3 <<<<<<<<<
->>>>>>>>>>> check point 1 <<<<<<<<<
-	TEST LEN: 5
-*** aa
-*** aal
-*** aalii
-*** aam
-*** aani
->>>>>>>>>>> check point 2 <<<<<<<<<
-FUCK!!!!
->>>>>>>>>>> check point 4 <<<<<<<<<
-
-*** predecessors of zebra (10) ***
-	aa aal aalii aam aani 
+****** checkpoint X *****
+82393 76197 76196 17211 40864 38694 17210 82641 79548 21955 79547 49780 12022 49779 24376 4410 4409 64864 64863 60906 60906 60906 60906 60906 60906 60906 60906 60906 60906 60906  * 31
 
 	*** These are your commands .........
 	"C" to scan the tree

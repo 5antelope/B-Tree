@@ -16,7 +16,7 @@ FILES:
 The files that are accessed and utilized are as follows:
 
 (1)  '*fp1' is a pointer to the new document file that is presented
-     at execution time.  The new document file is always named "text",
+     at execution time.  The new document file is aways named "text",
      as it is this 'text' file that will be concatenated to the main
      Text file.
 
