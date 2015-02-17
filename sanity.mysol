@@ -12,14 +12,6 @@
 	"x" to exit
 word=?
 k=?
-*** pageNo found:16812
-
-*** Checkpoint 1
-** test: alewife
-
-*** Checkpoint 2
-
-*** Checkpoint 3
 
 *** successors of alex (1) ***
 	alexander 
@@ -35,10 +27,8 @@ k=?
 	"T" to print the btree in inorder format
 	"#" to reset and print stats
 	"x" to exit
-****** checkpoint XX *****
 word=?
 k=?
-****** checkpoint X *****
 alewife 
 	*** These are your commands .........
 	"C" to scan the tree
@@ -66,10 +56,8 @@ param k start from 1
 	"T" to print the btree in inorder format
 	"#" to reset and print stats
 	"x" to exit
-****** checkpoint XX *****
 word=?
 k=?
-****** checkpoint X *****
 param k start from 1
 
 	*** These are your commands .........
@@ -85,15 +73,6 @@ param k start from 1
 	"x" to exit
 word=?
 k=?
-*** pageNo found:60906
-
-*** Checkpoint 1
-** test: zealousy
-** test: zealproof
-
-*** Checkpoint 2
-
-*** Checkpoint 3
 
 *** successors of zebra (10) ***
 	zebraic zebralike zebrass zebrawood zebrina zebrine zebrinny zebroid zebrula zebrule 
@@ -109,10 +88,8 @@ k=?
 	"T" to print the btree in inorder format
 	"#" to reset and print stats
 	"x" to exit
-****** checkpoint XX *****
 word=?
 k=?
-****** checkpoint X *****
 zealousy zealproof zebra zebraic zebralike zebrass zealously zealousness zealousy zealproof 
 	*** These are your commands .........
 	"C" to scan the tree

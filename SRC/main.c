@@ -108,12 +108,10 @@ int main(int argc, char **argv) {
             get_successors(word, k, NULL);
             break;
         case '<':
-            printf("****** checkpoint XX *****\n");
             printf("word=?\n");
             scanf("%s", word);
             printf("k=?\n");
             scanf("%d", &k);
-            printf("****** checkpoint X *****\n");
             get_predecessors(word, k, NULL);
             break;
         case 'T':

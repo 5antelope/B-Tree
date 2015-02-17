@@ -14,7 +14,6 @@ int get_successors(char *key, int k, char *result[]) {
 	PAGENO PageNo = treesearch_page(ROOT, key);
 	struct PageHdr *PagePtr = FetchPage(PageNo);
 	struct KeyRecord *KeyRcPtr = PagePtr->KeyListPtr;
-	printf("*** pageNo found:%lu\n", PageNo);
 	if (result == NULL) {
 		result = (char **)malloc(sizeof(char) * 10 * k);
 
@@ -26,14 +25,11 @@ int get_successors(char *key, int k, char *result[]) {
 		printf("\n*** ERROR *** not fount key\n");
 		return -1;
 	}
-	printf("\n*** Checkpoint 1\n");
 	while (CompareKeys(KeyRcPtr->StoredKey,key)!=0) {
-		printf("** test: %s\n", KeyRcPtr->StoredKey);
 		KeyRcPtr = KeyRcPtr->Next;
 	}
 
 	KeyRcPtr = KeyRcPtr->Next; 
-	printf("\n*** Checkpoint 2\n");
 	for (i=0; i<k && PagePtr!=NULL; i++) {
 		if (KeyRcPtr == NULL) {
 			PagePtr = FetchPage(PagePtr->PgNumOfNxtLfPg);
@@ -45,7 +41,6 @@ int get_successors(char *key, int k, char *result[]) {
 		KeyRcPtr = KeyRcPtr->Next;
 		len++;
 	}
-	printf("\n*** Checkpoint 3\n");
 	/* sort the result array */
 	for (i=0; i<len; i++) {
 		for (j = i+1; j<len; j++) {
