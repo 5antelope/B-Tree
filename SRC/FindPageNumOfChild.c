@@ -13,6 +13,9 @@
 
 #include "def.h"
 
+extern void List_push(List *list, PAGENO value);
+extern void List_print(List *list);
+
 PAGENO FindPageNumOfChild(struct PageHdr *PagePtr,
                           struct KeyRecord *KeyListTraverser, char *Key,
                           NUMKEYS NumKeys)
@@ -47,4 +50,34 @@ PAGENO FindPageNumOfChild(struct PageHdr *PagePtr,
         else                                   /* New key > stored key */
             return (PagePtr->PtrToFinalRtgPg); /* return rightmost child */
     }
+}
+
+PAGENO FindPageNumOfChild_record(struct PageHdr *PagePtr,
+                          struct KeyRecord *KeyListTraverser, char *Key,
+                          NUMKEYS NumKeys, struct List *list) 
+{
+    int Result;
+    char *Word;
+    int CompareKeys(char *Key, char *Word);
+
+    Word = KeyListTraverser->StoredKey;
+    (*(Word + KeyListTraverser->KeyLen)) = '\0';
+    Result = CompareKeys(Key, Word);
+
+    NumKeys = NumKeys - 1;
+
+    if (NumKeys > 0) {
+        if (Result == 2) { /* New key > stored key:  keep searching */
+            List_push(list, KeyListTraverser->PgNum);
+            KeyListTraverser = KeyListTraverser->Next;
+            return (
+                FindPageNumOfChild_record(PagePtr, KeyListTraverser, Key, NumKeys, list));
+        } else                                /* New key <= stored key */
+            return (KeyListTraverser->PgNum); /* return left child */
+    } else {
+        if ((Result == 1) || (Result == 0))    /* New key <= stored key */
+            return (KeyListTraverser->PgNum);  /* return left child */
+        else                                   /* New key > stored key */
+            return (PagePtr->PtrToFinalRtgPg); /* return rightmost child */
+    }    
 }

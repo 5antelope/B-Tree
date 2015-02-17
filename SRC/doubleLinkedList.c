@@ -7,7 +7,9 @@
 PAGENO List_remove(List *list, ListNode *node);
 
 List *List_create() {
-    return calloc(1, sizeof(List));
+    List *list =  calloc(1, sizeof(List));
+    assert(list && "*** NULL LIST ***");
+    return list;
 }
 
 void List_destroy(List *list) {
@@ -51,19 +53,19 @@ PAGENO List_pop(List *list) {
 PAGENO List_remove(List *list, ListNode *node) {
     PAGENO result;
 
-    assert(list->first && list->last && "*** LIST IS EMPTY ***");
-    assert(node && "*** NODE CANNOT BE NULL ***");
+    assert(list->first && list->last && "LIST IS EMPTY");
+    assert(node && "NODE CANNOT BE NULL");
 
     if(node == list->first && node == list->last) {
         list->first = NULL;
         list->last = NULL;
     } else if(node == list->first) {
         list->first = node->next;
-        assert(list->first != NULL && "*** INVALID LIST! FIRST IS NULL ***");
+        assert(list->first != NULL && "INVALID LIST! FIRST IS NULL");
         list->first->prev = NULL;
     } else if (node == list->last) {
         list->last = node->prev;
-        assert(list->last != NULL && "*** INVALID LIST! NEXT IS NULL ***");
+        assert(list->last != NULL && "INVALID LIST! NEXT IS NULL");
         list->last->next = NULL;
     } else {
         ListNode *after = node->next;
@@ -80,6 +82,7 @@ PAGENO List_remove(List *list, ListNode *node) {
 }
 
 void List_print(List *list) {
+    printf("\n\t*** list result:\n\n");
     LIST_FOREACH(list, first, next, cur) {
         if(cur->prev) {
             printf("%lu ", cur->value);

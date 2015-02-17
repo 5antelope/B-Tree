@@ -11,15 +11,34 @@
 
 extern POSTINGSPTR searchLeaf(struct PageHdr *PagePtr, char *key);
 extern int FreePage(struct PageHdr *PagePtr);
+extern PAGENO FindPageNumOfChild_record(struct PageHdr *PagePtr,
+                                 struct KeyRecord *KeyListTraverser, char *Key,
+                                 NUMKEYS NumKeys, struct List *list);
 extern PAGENO FindPageNumOfChild(struct PageHdr *PagePtr,
                                  struct KeyRecord *KeyListTraverser, char *Key,
                                  NUMKEYS NumKeys);
 extern struct PageHdr *FetchPage(PAGENO Page);
 
-/**
- * recursive call to find the page in which the key should reside
- * and return the page number (guaranteed to be a leaf page).
- */
+extern void List_push(List *list, PAGENO value);
+extern void List_print(List *list);
+
+void treesearch_page_record(PAGENO PageNo, char *key, struct List *list) {
+    struct PageHdr *PagePtr = FetchPage(PageNo);
+    if (IsLeaf(PagePtr)) {
+        return;
+    } else if ((IsNonLeaf(PagePtr)) && (PagePtr->NumKeys == 0)) {
+        treesearch_page_record(FIRSTLEAFPG, key, list);
+    } else if ((IsNonLeaf(PagePtr)) && (PagePtr->NumKeys > 0)) {
+        PAGENO ChildPage = FindPageNumOfChild_record(PagePtr, PagePtr->KeyListPtr, key,
+                                              PagePtr->NumKeys, list);
+        List_push(list, ChildPage);
+        treesearch_page_record(ChildPage, key, list);
+    } else {
+        assert(0 && "this should never happen");
+    }
+    FreePage(PagePtr);
+}
+
 PAGENO treesearch_page(PAGENO PageNo, char *key) {
     PAGENO result;
     struct PageHdr *PagePtr = FetchPage(PageNo);
