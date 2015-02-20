@@ -2,7 +2,6 @@
 #include <string.h>
 #include "def.h"
 
-extern List *List_create(void);
 extern int CompareKeys(char *Key, char *Word);
 extern struct PageHdr *FetchPage(PAGENO Page);
 extern void backtrace(struct PageHdr *PagePtr, struct KeyRecord *KeyRcPtr, char *result[], int *cur, int *k, char *key);

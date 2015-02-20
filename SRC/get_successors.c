@@ -12,8 +12,12 @@ int get_successors(char *key, int k, char *result[]) {
 
 	int i, j, len=0;
 	PAGENO PageNo = treesearch_page(ROOT, key);
+
+	assert(PageNo > 0);
+
 	struct PageHdr *PagePtr = FetchPage(PageNo);
 	struct KeyRecord *KeyRcPtr = PagePtr->KeyListPtr;
+
 	if (result == NULL) {
 		result = (char **)malloc(sizeof(char) * 10 * k);
 
@@ -21,15 +25,12 @@ int get_successors(char *key, int k, char *result[]) {
     		result[i] = (char *)malloc(sizeof(char) * 10);
 	}
 
-	if (PageNo == 0) {
-		printf("\n*** ERROR *** not fount key\n");
-		return -1;
-	}
-	while (CompareKeys(KeyRcPtr->StoredKey,key)!=0) {
+	while (strcmp(key, KeyRcPtr->StoredKey)>0) {
 		KeyRcPtr = KeyRcPtr->Next;
 	}
-
-	KeyRcPtr = KeyRcPtr->Next; 
+	if (strcmp(key, KeyRcPtr->StoredKey)==0)
+		KeyRcPtr = KeyRcPtr->Next; 
+	
 	for (i=0; i<k && PagePtr!=NULL; i++) {
 		if (KeyRcPtr == NULL) {
 			PagePtr = FetchPage(PagePtr->PgNumOfNxtLfPg);

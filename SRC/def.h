@@ -86,16 +86,3 @@ struct upKey {
 	PAGENO		right;	/* right page, with keys > */
 	char *		key;
 };
-
-/* define a stack by by self */
-typedef struct ListNode {
-    struct ListNode *prev;
-    struct ListNode *next;
-    PAGENO     value;
-} ListNode;
-
-typedef struct List {
-    int count;
-    ListNode *first;
-    ListNode *last;
-} List;

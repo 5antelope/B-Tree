@@ -11,17 +11,10 @@
 
 extern POSTINGSPTR searchLeaf(struct PageHdr *PagePtr, char *key);
 extern int FreePage(struct PageHdr *PagePtr);
-extern PAGENO FindPageNumOfChild_record(struct PageHdr *PagePtr,
-                                 struct KeyRecord *KeyListTraverser, char *Key,
-                                 NUMKEYS NumKeys, struct List *list);
 extern PAGENO FindPageNumOfChild(struct PageHdr *PagePtr,
                                  struct KeyRecord *KeyListTraverser, char *Key,
                                  NUMKEYS NumKeys);
 extern struct PageHdr *FetchPage(PAGENO Page);
-
-extern void List_push(List *list, PAGENO value);
-extern void List_print(List *list);
-
 
 PAGENO treesearch_page(PAGENO PageNo, char *key) {
     PAGENO result;
