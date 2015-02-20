@@ -6,7 +6,7 @@ extern int CompareKeys(char *Key, char *Word);
 
 int get_successors(char *key, int k, char *result[]) {
     if (k<1) {
-		printf("param k start from 1\n");
+		printf("k should be positive not -1");
 	    return -1;
     }
 
@@ -52,12 +52,11 @@ int get_successors(char *key, int k, char *result[]) {
 		}
 	}
 
-	printf("\n*** successors of %s (%d) ***\n\t", key, k);
+	printf("found %d successors:\n", len);
 
-	for (i=0; len>0; len--, i++)
-		printf("%s ",result[i]);
-
-	printf("\n");
+	for (i=0; len>0; len--, i++) {
+		printf("%s\n",result[i]);
+	}
 
 	free(result);
 

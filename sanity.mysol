@@ -12,38 +12,8 @@
 	"x" to exit
 word=?
 k=?
-
-*** successors of alex (1) ***
-	alexander 
-
-	*** These are your commands .........
-	"C" to scan the tree
-	"i" to insert
-	"p" to print a btree page
-	"s" to search, and print the key
-	"S" to search, and print the key, posting list pairs
-	">" to print k successors
-	"<" to print k predecessors
-	"T" to print the btree in inorder format
-	"#" to reset and print stats
-	"x" to exit
-word=?
-k=?
-alewife 
-	*** These are your commands .........
-	"C" to scan the tree
-	"i" to insert
-	"p" to print a btree page
-	"s" to search, and print the key
-	"S" to search, and print the key, posting list pairs
-	">" to print k successors
-	"<" to print k predecessors
-	"T" to print the btree in inorder format
-	"#" to reset and print stats
-	"x" to exit
-word=?
-k=?
-param k start from 1
+found 1 successors:
+alexander
 
 	*** These are your commands .........
 	"C" to scan the tree
@@ -58,7 +28,8 @@ param k start from 1
 	"x" to exit
 word=?
 k=?
-param k start from 1
+found 1 predecessors:
+alewife
 
 	*** These are your commands .........
 	"C" to scan the tree
@@ -73,9 +44,45 @@ param k start from 1
 	"x" to exit
 word=?
 k=?
-
-*** successors of zebra (10) ***
-	zebraic zebralike zebrass zebrawood zebrina zebrine zebrinny zebroid zebrula zebrule 
+k should be positive not -1
+	*** These are your commands .........
+	"C" to scan the tree
+	"i" to insert
+	"p" to print a btree page
+	"s" to search, and print the key
+	"S" to search, and print the key, posting list pairs
+	">" to print k successors
+	"<" to print k predecessors
+	"T" to print the btree in inorder format
+	"#" to reset and print stats
+	"x" to exit
+word=?
+k=?
+k should be positive not -1
+	*** These are your commands .........
+	"C" to scan the tree
+	"i" to insert
+	"p" to print a btree page
+	"s" to search, and print the key
+	"S" to search, and print the key, posting list pairs
+	">" to print k successors
+	"<" to print k predecessors
+	"T" to print the btree in inorder format
+	"#" to reset and print stats
+	"x" to exit
+word=?
+k=?
+found 10 successors:
+zebraic
+zebralike
+zebrass
+zebrawood
+zebrina
+zebrine
+zebrinny
+zebroid
+zebrula
+zebrule
 
 	*** These are your commands .........
 	"C" to scan the tree
@@ -90,7 +97,18 @@ k=?
 	"x" to exit
 word=?
 k=?
-zealousy zealproof zebra zebraic zebralike zebrass zealously zealousness zealousy zealproof 
+found 10 predecessors:
+zealotic
+zealotical
+zealotism
+zealotist
+zealotry
+zealous
+zealously
+zealousness
+zealousy
+zealproof
+
 	*** These are your commands .........
 	"C" to scan the tree
 	"i" to insert
