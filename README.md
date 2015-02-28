@@ -1,2 +1,4 @@
 # B+ Tree
-A B+ Tree application in C - CMU 15615
+B+ Tree application in C - CMU 15615
+
+-------------------------------------
