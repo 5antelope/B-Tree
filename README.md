@@ -1,8 +1,8 @@
 # B+ Tree
 B+ Tree application in C @ CMU 15615
 
-Main Functionalities:
+Main functionalities:
 -------------------------------------
-- fetch-page cnt
-- successor search
-- predecessor search
+- fetch-page count [as performance indicator]
+- successor query
+- predecessor query
